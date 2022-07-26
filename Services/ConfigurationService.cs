@@ -12,10 +12,10 @@ namespace AzureStoragePractice.Services
         {
             var builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appSettings.json");
+            .AddJsonFile("AppSettings.json");
 
             IConfiguration config = new ConfigurationBuilder()
-            .AddJsonFile("appSettings.json", true, true)
+            .AddJsonFile("AppSettings.json", true, true)
             .Build();
 
             connectionString = config[nameof(connectionString)];
